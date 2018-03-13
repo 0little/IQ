@@ -1,6 +1,7 @@
 # IQ
-小题集锦
-###鼠标单击页面中任意标签，alert该标签的标签名
+## 小题集锦
+
+### 鼠标单击页面中任意标签，alert该标签的标签名
 ```js
 document.onclick = function(e) {
   var e = (e||event);
@@ -8,7 +9,7 @@ document.onclick = function(e) {
   alert(o.tagName.toLowerCase());
 }
 ```
-###删除字符串中前后空格的方法
+### 删除字符串中前后空格的方法
 ```js
 //原生JS实现,将方法添加在string对象上
 //使用正则表达式
@@ -33,7 +34,7 @@ String.prototype.trim=function(){
 $.trim();
 ```
 
-###判断字符串内容是否为数字
+### 判断字符串内容是否为数字
 ```js
 //正则表达式
 function checkNumber(theObj) {
@@ -45,7 +46,7 @@ function checkNumber(theObj) {
     }
 
 ```
-###函数柯里化
+### 函数柯里化
 ```js
 var currying = function(fn) {
   var _args = [];
