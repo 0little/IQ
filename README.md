@@ -32,3 +32,47 @@ String.prototype.trim=function(){
 //jQuery中的方法,删除字符串两端的空白字符
 $.trim();
 ```
+
+###判断字符串内容是否为数字
+```js
+//正则表达式
+function checkNumber(theObj) {
+        var reg = /^[1-9]+.?[0-9]*$/;
+        if (reg.test(theObj) || theObj === "0") {
+            return true;
+        }
+        return false;
+    }
+
+```
+###函数柯里化
+```js
+var currying = function(fn) {
+  var _args = [];
+  return function () {
+    if(arguments.length === 0) {
+      return fn.apply(this, _args);
+    }
+    Array.prototype.push.apply(_args, [].slice.call(arguments);
+    return arguments.calee;
+  }
+}
+
+//乘法示例
+var multi = function() {
+  var total = 0;
+  for(var i = 0, c; c = arguments[i++];) {
+    total += c;
+  }
+  return total;
+};
+
+var sum = currying(multi);
+
+sum = currying(multi);
+
+sum(100, 200)(300);
+sum(400);
+console.log(sum()); //1000 (空白调用时才真正计算)
+
+```
