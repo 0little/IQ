@@ -81,3 +81,11 @@ console.log(sum()); //1000 (空白调用时才真正计算)
 ```js
 let pass = /^(?![]0-9]+$)(?![a-zA-Z]+$)[0-9A-Aa-z]{6, 16}$/;
 ```
+
+### 电子邮件验证函数
+```js
+function checkMail($mailaddress) {
+    var reg = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+    return reg.test($mailaddress);
+}
+```
