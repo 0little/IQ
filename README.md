@@ -89,3 +89,17 @@ function checkMail($mailaddress) {
     return reg.test($mailaddress);
 }
 ```
+### 删除字符串中所有的空格
+var reg = /\s+/g;
+str = str.replace(reg, '');
+### 判断一个字符串中是否只有数字和字母
+var reg =/^[0-9a-zA-Z]$/;
+if(reg.test(str)) {
+} else {
+}
+###判断一个数是否是整数
+Math.floor(num) === num;
+es6的方法：Number.isInteger(参数);
+
+### 判断字符串是否是数字
+reg = /^[0-9]+.?[0-9]*$/;
