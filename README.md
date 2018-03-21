@@ -127,3 +127,29 @@ var EventUtil = {
         }
     }
 ```
+
+### 跨浏览器的事件对象
+```javascript
+var EventUtil = {
+      getEvent: function (event) {
+          return event ? event : window.event;
+      },
+      getTarget: function (event) {
+          return event.target || event.srcElement;
+      },
+      preventDefault: function (event) {
+          if(evnet.preventDefault) {
+              event.preventDefault();
+          } else {
+              event.returnValue = false;
+          }
+      },
+      stopPropagation: function (event) {
+          if(event.stopPropagation) {
+              event.stopPropagation();
+          } else {
+              event.cancelBubble = true;
+          }
+      }  
+    };
+```
