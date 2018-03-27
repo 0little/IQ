@@ -34,18 +34,6 @@ String.prototype.trim=function(){
 $.trim();
 ```
 
-### 判断字符串内容是否为数字
-```js
-//正则表达式
-function checkNumber(theObj) {
-        var reg = /^[1-9]+.?[0-9]*$/;
-        if (reg.test(theObj) || theObj === "0") {
-            return true;
-        }
-        return false;
-    }
-
-```
 ### 函数柯里化
 ```js
 var currying = function(fn) {
@@ -77,32 +65,11 @@ sum(400);
 console.log(sum()); //1000 (空白调用时才真正计算)
 
 ```
-### 密码验证函数；要求：由字母和数字组成；6-16位；字母和数字至少出现一次
-```js
-let pass = /^(?![]0-9]+$)(?![a-zA-Z]+$)[0-9A-Aa-z]{6, 16}$/;
-```
 
-### 电子邮件验证函数
-```js
-function checkMail($mailaddress) {
-    var reg = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
-    return reg.test($mailaddress);
-}
-```
-### 删除字符串中所有的空格
-var reg = /\s+/g;
-str = str.replace(reg, '');
-### 判断一个字符串中是否只有数字和字母
-var reg =/^[0-9a-zA-Z]$/;
-if(reg.test(str)) {
-} else {
-}
-###判断一个数是否是整数
+
+### 判断一个数是否是整数
 Math.floor(num) === num;
 es6的方法：Number.isInteger(参数);
-
-### 判断字符串是否是数字
-reg = /^[0-9]+.?[0-9]*$/;
 
 ### 跨浏览器的事件处理程序
 ```javascript
